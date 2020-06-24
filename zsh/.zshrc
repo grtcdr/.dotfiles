@@ -90,7 +90,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
+   export VISUAL=vim
+   export EDITOR="$VISUAL"
 # else
 #   export EDITOR='mvim'
 # fi
@@ -115,11 +116,12 @@ function termreset() { printf "\ec" }
  alias upd="sudo apt update"
  alias upg="sudo apt upgrade"
  alias aurm="sudo apt autoremove"
-
+ 
+ alias batinfo="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
+ alias batleft="batinfo | sed -n -e 20,21p"
 # Keybindings
  bindkey -s '\el' 'ls\n'
  bindkey -s '\ec' 'cd\n'
- bindkey -s '\er' 'termreset\n'
- bindkey -s '\ed' '..\n'
+ bindkey -s '\ed' 'termreset\n'
  
 source /home/bata/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
