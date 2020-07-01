@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.cargo/bin:$HOME/.local/bin:$HOME/.weechat/python:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/bata/.oh-my-zsh"
@@ -8,7 +8,7 @@ export ZSH="/home/bata/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="geoffgarside"
+ZSH_THEME="theshiz"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -116,7 +116,9 @@ function termreset() { printf "\ec" }
  alias upd="sudo apt update"
  alias upg="sudo apt upgrade"
  alias aurm="sudo apt autoremove"
- 
+
+ alias gs="git status"
+
  alias batinfo="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
  alias batleft="batinfo | sed -n -e 20,21p"
 # Keybindings
@@ -124,4 +126,5 @@ function termreset() { printf "\ec" }
  bindkey -s '\ec' 'cd\n'
  bindkey -s '\ed' 'termreset\n'
  
-source /home/bata/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/bata/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/bata/.oh-my-zsh/custom/plugins/geometry/geometry.zsh
