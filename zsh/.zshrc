@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.cargo/bin:$HOME/.local/bin:$HOME/.weechat/python:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/Games/Xonotic:$HOME/.cargo/bin:$HOME/.local/bin:$HOME/.weechat/python:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/bata/.oh-my-zsh"
@@ -8,7 +8,8 @@ export ZSH="/home/bata/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="theshiz"
+# My custom theme "theshiz"
+ZSH_THEME="risto"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -76,6 +77,7 @@ safe-paste
 sudo
 fancy-ctrl-z
 ubuntu
+z
 )
 
 
@@ -103,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-function cdls { builtin cd "$@" && ls -F }
+function cdls { builtin cd "$@" && exa -F }
 function termreset() { printf "\ec" }
 # Example aliases
  alias zrc="vim ~/.zshrc"
@@ -116,7 +118,7 @@ function termreset() { printf "\ec" }
  alias upd="sudo apt update"
  alias upg="sudo apt upgrade"
  alias aurm="sudo apt autoremove"
-
+ alias at="alacritty-themes"
  alias gs="git status"
 
  alias batinfo="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
@@ -127,4 +129,4 @@ function termreset() { printf "\ec" }
  bindkey -s '\ed' 'termreset\n'
  
 source /home/bata/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /home/bata/.oh-my-zsh/custom/plugins/geometry/geometry.zsh
+#source /home/bata/.oh-my-zsh/custom/plugins/geometry/geometry.zsh
