@@ -1,15 +1,14 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/Games/Xonotic:$HOME/.cargo/bin:$HOME/.local/bin:$HOME/.weechat/python:$PATH
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/bata/.oh-my-zsh"
+export ZSH="/home/grtcdr/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# My custom theme "theshiz"
-ZSH_THEME="risto"
+ZSH_THEME="cypher"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -34,7 +33,7 @@ ZSH_THEME="risto"
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
+# DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -71,15 +70,11 @@ ZSH_THEME="risto"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 git
-zsh-autosuggestions
-extract
+extract	
 safe-paste
 sudo
 fancy-ctrl-z
-ubuntu
-z
 )
-
 
 source $ZSH/oh-my-zsh.sh
 
@@ -92,8 +87,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-   export VISUAL=vim
-   export EDITOR="$VISUAL"
+#   export EDITOR='vim'
 # else
 #   export EDITOR='mvim'
 # fi
@@ -101,32 +95,26 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
+export EDITOR=vim
+export TERM=alacritty
+# Color man pages
+export LESS_TERMCAP_mb=$'\E[01;32m'
+export LESS_TERMCAP_md=$'\E[01;32m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;47;34m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;36m'
+export LESS=-r
+
 function cdls { builtin cd "$@" && exa -F }
 function termreset() { printf "\ec" }
-# Example aliases
- alias zrc="vim ~/.zshrc"
- alias vrc="vim ~/.vimrc"
- alias arc="vim ~/.config/alacritty.yml"
- alias ..="cd .."
 
- alias cd="cdls"
+source ~/.config/.aliasrc
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
- alias upd="sudo apt update"
- alias upg="sudo apt upgrade"
- alias aurm="sudo apt autoremove"
- alias at="alacritty-themes"
- alias gs="git status"
-
- alias batinfo="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
- alias batleft="batinfo | sed -n -e 20,21p"
 # Keybindings
- bindkey -s '\el' 'ls\n'
- bindkey -s '\ec' 'cd\n'
- bindkey -s '\ed' 'termreset\n'
- 
-source /home/bata/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#source /home/bata/.oh-my-zsh/custom/plugins/geometry/geometry.zsh
+   bindkey -s '\ec' 'cd\n'
+   bindkey -s '\ed' 'termreset\n'
