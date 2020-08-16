@@ -1,0 +1,20 @@
+alias \
+	gs='git status' \
+	gp='git push' \
+	ga='git add' \
+	l='exa -F' \
+	ll='exa -l' \
+	la='exa -la' \
+    cd='cdls' \
+	vrc='vim ~/.vimrc' \
+	zrc='vim ~/.zshrc && source ~/.zshrc' \
+	alrc='vim ~/.config/.aliasrc && source ~/.zshrc' \
+	arc='vim ~/.config/alacritty.yml' \
+    src='vim ~/.config/sxhkd/sxhkdrc' \
+	brc='vim ~/.config/bspwm/bspwmrc' \
+	build='makepkg -si' \
+	howbig='du --apparent-size -h' \
+	vsc='vscodium' \
+	pwgn='pwgen -ysBv' \
+	steam='prime-run steam & disown' \
+	at='alacritty-themes'
