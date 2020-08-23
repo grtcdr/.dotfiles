@@ -1,6 +1,4 @@
-#
 # wm independent hotkeys
-#
 
 alt + f
 	bspc desktop --focus ^1 && firefox
@@ -25,17 +23,18 @@ super + @space
 super + Escape
 	pkill -USR1 -x sxhkd
 
-super + shift + p
-    pkill -USR1 polybar
-#
-#Audio control, requires pulseaudio-ctl (whose volume never exceeds 100%)
-#
+#super + shift + p
+#    pkill -USR1 polybar
 
-XF86AudioLowerVolume
-    pulseaudio-ctl down 1
+##########################################################################
+#Audio control, requires pulseaudio-ctl (whose volume never exceeds 100%)#
+##########################################################################
 
 XF86AudioRaiseVolume
-    pulseaudio-ctl up 1
+    sh ~/Scripts/volume.sh up
+
+XF86AudioLowerVolume
+    sh ~/Scripts/volume.sh down
 
 #Mute/Unmute
 XF86AudioMute
@@ -52,6 +51,22 @@ XF86AudioPlay
 
 XF86AudioStop
     playerctl stop
+
+#Brightness control, requires light package (light requires sudo to function)
+
+XF86MonBrightnessUp
+    sh ~/Scripts/light.sh up
+
+XF86MonBrightnessDown
+    sh ~/Scripts/light.sh down 
+
+#polybar controls
+
+ctrl + alt + t
+    polybar-msg cmd toggle
+
+ctrl + alt + r
+    polybar-msg cmd restart
 
 #
 # bspwm hotkeys
