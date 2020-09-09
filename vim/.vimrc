@@ -16,6 +16,11 @@ set incsearch
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
+
+set noshowmode  " to get rid of thing like --INSERT--
+set noshowcmd  " to get rid of display of last command
+set shortmess+=F  " to get rid of the file name displayed in the command line bar
+
 " Enable syntax highlighting
 syntax enable
 colorscheme nord 
