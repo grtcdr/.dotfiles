@@ -1,9 +1,10 @@
 # sxhkdrc
-# system.sh is a script I wrote to modify 
-# system volume, backlight, toggle wifi, take screenshots etc.
 
 alt + f
 	bspc desktop --focus ^1 && firefox
+
+alt + t
+    bspc desktop --focus ^5 && thunar
 
 alt + s
 	bspc desktop --focus ^3 && spotify 
@@ -12,9 +13,12 @@ alt + c
     bspc desktop --focus ^4 && code
 
 alt + d
-    bspc desktop --focus ^6 && discord-canary
+    bspc desktop --focus ^7 && discord-canary
 
-#Print screen and place the screenshot in its specific directory
+alt + m
+    rofiall
+
+# print entire screen
 Print
     system.sh capture
 
@@ -24,7 +28,10 @@ super + Return
 
 # program launcher
 super + @space
-    rofi -show drun
+    rofi -show drun -location 1 -yoffset 34 -display-run "Run" -display-drun "Apps" -display-window "Windows"
+
+super + alt + c
+    clipmenu
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -33,6 +40,9 @@ super + Escape
 ##########################################
 # Audio control, requires pulseaudio-ctl #
 ##########################################
+
+alt + shift + l
+    system.sh lock
 
 XF86AudioRaiseVolume
     system.sh a up
@@ -68,7 +78,7 @@ XF86MonBrightnessDown
     system.sh l down
 
 #Enable/Disable Wifi
-XF86RFKill
+alt + shift + n
     system.sh n toggle
 
 #polybar controls
@@ -183,3 +193,9 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+~button3
+        bspc query -D -d 'focused.!occupied' && \{ \
+            rofi -show drun -location 1 -yoffset 34; \
+        \}
+

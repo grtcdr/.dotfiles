@@ -70,9 +70,9 @@ export UPDATE_ZSH_DAYS=4
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 git
-extract	
 safe-paste
 sudo
+extract
 fancy-ctrl-z
 )
 
@@ -97,6 +97,8 @@ export LANG=en_US.UTF-8
 
 export EDITOR=vim
 export TERM=alacritty
+#export DISPLAY=archlinux:0.0
+export DISPLAY=:0
 # Color man pages
 export LESS_TERMCAP_mb=$'\E[01;32m'
 export LESS_TERMCAP_md=$'\E[01;32m'
@@ -107,6 +109,10 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;36m'
 export LESS=-r
 
+export CM_LAUNCHER=rofi
+export CM_HISTLENGTH=10
+export CM_MAX_CLIPS=10
+
 function cdls { builtin cd "$@" && exa -F }
 function termreset() { printf "\ec" }
 
@@ -114,6 +120,12 @@ source ~/.config/.aliasrc
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+export SLEEP_AFTER=30
+export LOCK_AFTER=15
+
+#This works but codeblocks is ugly still
+#export GTK_THEME=Yaru-dark:dark codeblocks
 
 # Keybindings
 bindkey -s '\ec' 'cd\n'

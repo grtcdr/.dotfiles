@@ -1,0 +1,1 @@
+../../../.dotfiles/polybar/.config/polybar/ext-scripts/system-uptime-pretty.sh
