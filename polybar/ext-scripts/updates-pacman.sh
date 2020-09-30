@@ -1,1 +1,0 @@
-../../../.dotfiles/polybar/.config/polybar/ext-scripts/updates-pacman.sh

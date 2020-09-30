@@ -1,1 +1,0 @@
-../../../.dotfiles/polybar/.config/polybar/ext-scripts/system-nvidia-smi.sh
