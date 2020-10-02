@@ -1,16 +1,11 @@
-#! /bin/sh
+#!/bin/sh
 
 sxhkd &
-picom &
 $HOME/.config/polybar/launch.sh &
-$HOME/bin/power.sh &
 /usr/bin/lxpolkit &
+feh --bg-scale ~/Pictures/Wallpapers/thc.png &
 
-# Set a random wallpaper from a wallpaper directory
-# sh /home/grtcdr/Scripts/randwallp.sh &
-#feh --bg-scale ~/Pictures/Wallpapers/minimal.png
-
-bspc monitor -d Web Term Music Code Files Edit Comm Steam
+bspc monitor -d Web Term Music Code Files Edit Comm Steam IX X
 
 bspc config border_width         1
 bspc config window_gap           12
@@ -25,8 +20,9 @@ bspc config normal_border_color "#4c566a"
 bspc rule -a firefox desktop=Web follow=on
 bspc rule -a Alacritty desktop=Term follow=on
 bspc rule -a spotify desktop=Music follow=on
+bspc rule -a rhythmbox desktop=Music follow=on
 bspc rule -a code desktop=Code follow=on
 bspc rule -a Thunar=Files follow=on
-bspc rule -a Gimp desktop=Edit follow=on
+bspc rule -a gimp desktop=Edit follow=on
 bspc rule -a discord-canary desktop=Comm follow=on
 bspc rule -a Steam desktop=Steam follow=on

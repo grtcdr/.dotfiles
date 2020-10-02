@@ -17,4 +17,5 @@ alias \
 	vsc='vscodium' \
 	pwgn='pwgen -ysBv' \
 	steam='prime-run steam & disown' \
+    ytdl='ytdl.sh' \
     batinfo='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
