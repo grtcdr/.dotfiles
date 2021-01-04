@@ -1,132 +1,53 @@
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
+# grtcdr's zsh config file
+#export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$ORACLE_HOME/bin:/etc/rc.d:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:/etc/rc.d:$PATH
 
-# Path to your oh-my-zsh installation.
+# oh-my-zsh installation path
 export ZSH="/home/grtcdr/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="cypher"
+ZSH_THEME="grtcdr"
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
 
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
-# Uncomment the following line to automatically update without prompting.
 # DISABLE_UPDATE_PROMPT="true"
 
-# Uncomment the following line to change how often to auto-update (in days).
-export UPDATE_ZSH_DAYS=4
+# export UPDATE_ZSH_DAYS=13
 
-# Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
 
-# Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
 
-# Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
-# Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
 
-# Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
 
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
-# Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(
-git
-safe-paste
 sudo
-extract
 fancy-ctrl-z
 )
 
-source $ZSH/oh-my-zsh.sh
+# If vim is installed, editor will be set to vim, else set editor to nano
+[ -x /usr/bin/vim ] && export EDITOR="vim" && export VISUAL="vim" || export EDITOR="nano"
+[ -x /usr/bin/konsole ] && export TERM="konsole-256color"
+function cdls { builtin cd "$@" && exa }
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
 export LANG=en_US.UTF-8
+export MANPATH="/usr/local/man:$MANPATH"
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-export EDITOR=vim
-export TERM=alacritty
-#export DISPLAY=archlinux:0.0
-export DISPLAY=:0
-# Color man pages
-export LESS_TERMCAP_mb=$'\E[01;32m'
-export LESS_TERMCAP_md=$'\E[01;32m'
-export LESS_TERMCAP_me=$'\E[0m'
-export LESS_TERMCAP_se=$'\E[0m'
-export LESS_TERMCAP_so=$'\E[01;47;34m'
-export LESS_TERMCAP_ue=$'\E[0m'
-export LESS_TERMCAP_us=$'\E[01;36m'
-export LESS=-r
-
-export CM_LAUNCHER=rofi
-export CM_HISTLENGTH=10
-export CM_MAX_CLIPS=10
-
-function cdls { builtin cd "$@" && exa -F }
-function termreset() { printf "\ec" }
-
-source ~/.config/.aliasrc
+source $ZSH/oh-my-zsh.sh
+[ -f "$HOME/.config/.aliasrc" ] && source ~/.config/.aliasrc
+[ -f "$HOME/.config/.secrets" ] && source ~/.config/.secrets
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-
-export SLEEP_AFTER=30
-export LOCK_AFTER=15
-
-#This works but codeblocks is ugly still
-#export GTK_THEME=Yaru-dark:dark codeblocks
-
-# Keybindings
-bindkey -s '\ec' 'cd\n'
-bindkey -s '\ed' 'termreset\n'
