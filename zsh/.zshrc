@@ -1,6 +1,10 @@
-# grtcdr's zsh config file
-#export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$ORACLE_HOME/bin:/etc/rc.d:$PATH
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:/etc/rc.d:$PATH
+# grtcdr's confidential, top secret, nonpublic, esoteric zsh config file 
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
+
+export LOCAL_BIN="$HOME/.local/bin"
+[ -d "$LOCAL_BIN" ] && PATH+=$LOCAL_BIN
+export CARGO_DIR="$HOME/.cargo/bin"
+[ -d "$CARGO_DIR" ] && PATH+=$CARGO_DIR 
 
 # oh-my-zsh installation path
 export ZSH="/home/grtcdr/.oh-my-zsh"
@@ -29,9 +33,9 @@ CASE_SENSITIVE="true"
 
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# HIST_STAMPS="mm/dd/yyyy"
-
 # ZSH_CUSTOM=/path/to/new-custom-folder
+
+#HIST_STAMPS="dd/mm/yyyy"
 
 plugins=(
 sudo
