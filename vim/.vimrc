@@ -15,7 +15,8 @@ set encoding=utf-8
 set title
 set pastetoggle=<F3>
 set cursorline
-set t_Co=256
+"set t_Co=256
+set termguicolors
 set background=dark
 color material 
 

@@ -8,7 +8,7 @@ LOCAL_BIN="$HOME/.local/bin"
 export ZSH="/home/grtcdr/.oh-my-zsh"
 
 ZSH_THEME="grtcdr"
-CASE_SENSITIVE="true"
+#CASE_SENSITIVE="false"
 # HYPHEN_INSENSITIVE="true"
 # DISABLE_AUTO_UPDATE="true"
 # DISABLE_UPDATE_PROMPT="true"
@@ -21,6 +21,7 @@ CASE_SENSITIVE="true"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 # HIST_STAMPS="dd/mm/yyyy"
+alias -s {css,js,html,md}=code
 
 plugins=(
 sudo
@@ -30,7 +31,7 @@ fancy-ctrl-z
 function cdls { builtin cd "$@" && exa }
 # If vim is installed, editor will be set to vim, if not, set editor to nano
 [ -x /usr/bin/vim ] && export EDITOR="vim" && export VISUAL="vim" || export EDITOR="nano"
-[ -x /usr/bin/konsole ] && export TERM="konsole-256color"
+#[ -x /usr/bin/konsole ] && export TERM="konsole-256color"
 export LANG=en_US.UTF-8
 #export MANPATH="/usr/local/man:$MANPATH"
 # source some files
@@ -40,4 +41,4 @@ source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-macchina --short-cpu
+mac -t alt -c yellow -p
