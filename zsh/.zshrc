@@ -1,14 +1,14 @@
 # grtcdr's confidential, top secret, nonpublic, esoteric zsh config file 
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 
-LOCAL_BIN="$HOME/.local/bin"
-[ -d "$LOCAL_BIN" ] && PATH+=$LOCAL_BIN
-
 # oh-my-zsh installation path
 export ZSH="/home/grtcdr/.oh-my-zsh"
+export LANG=en_US.UTF-8
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+[ -x /usr/bin/vim ] && export EDITOR="vim" || export EDITOR="nano"
 
-ZSH_THEME="grtcdr"
-#CASE_SENSITIVE="false"
+ZSH_THEME="afowler"
+CASE_SENSITIVE="true"
 # HYPHEN_INSENSITIVE="true"
 # DISABLE_AUTO_UPDATE="true"
 # DISABLE_UPDATE_PROMPT="true"
@@ -24,21 +24,17 @@ ZSH_THEME="grtcdr"
 alias -s {css,js,html,md}=code
 
 plugins=(
-sudo
 fancy-ctrl-z
+sudo
 )
 
-function cdls { builtin cd "$@" && exa }
-# If vim is installed, editor will be set to vim, if not, set editor to nano
-[ -x /usr/bin/vim ] && export EDITOR="vim" && export VISUAL="vim" || export EDITOR="nano"
-#[ -x /usr/bin/konsole ] && export TERM="konsole-256color"
-export LANG=en_US.UTF-8
-#export MANPATH="/usr/local/man:$MANPATH"
-# source some files
+function cdls { builtin cd "$@" && exa -F }
+
+# Source some files
 source $ZSH/oh-my-zsh.sh
-[ -f "$HOME/.config/.aliasrc" ] && source ~/.config/.aliasrc
 [ -f "$HOME/.config/.secrets" ] && source ~/.config/.secrets
+[ -d "$HOME/.config/aliases" ] && for f in $HOME/.config/aliases/*; do source $f; done
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-mac -t alt -c yellow -p
+mac -S 2 -p -r

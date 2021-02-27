@@ -1,0 +1,16 @@
+alias \
+    	l='exa -F' \
+	la='exa -la' \
+	ll='exa -l' \
+	ls='exa' \
+    	cd='cdls' \
+    	cp='cp -i' \
+	mv='mv -i' \
+	mkd='mkdir -p' \
+    	sudo='doas' \
+	ns='nvidia-smi' \
+	vrc='vim ~/.vimrc' \
+	krc='vim ~/.config/kitty/kitty.conf' \
+	zrc='vim ~/.zshrc && . ~/.zshrc' \
+	alrc='vim ~/.config/aliases && . ~/.zshrc' \
+	arc='vim ~/.config/alacritty.yml'

@@ -1,0 +1,6 @@
+alias \
+	pacin='sudo pacman -S' \
+	pacrm='sudo pacman -R' \
+	pacrs='pacman -Ss' \
+	pacls='pacman -Qi' \
+	pacup='sudo pacman -Syu'

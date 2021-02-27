@@ -1,5 +1,4 @@
 call plug#begin('~/.vim/plugged')
-Plug 'arcticicestudio/nord-vim'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'w0ng/vim-hybrid'
 Plug 'vim-airline/vim-airline'
@@ -16,13 +15,13 @@ set title
 set pastetoggle=<F3>
 set cursorline
 "set t_Co=256
-set termguicolors
+"set termguicolors
 set background=dark
 color material 
 
-let g:airline_theme='hybrid'
+let g:airline_theme='material'
 
-hi CursorLine term=bold cterm=bold
+"hi CursorLine term=bold cterm=bold
 
 " General keybindings
 nnoremap <C-x> :qa<CR>

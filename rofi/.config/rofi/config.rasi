@@ -1,9 +1,0 @@
-configuration {
-	modi: "window,run,drun";
-	lines: 10;
-	font: "Fira Code 11";
-	terminal: "rofi-sensible-terminal";
-	click-to-exit: true;
-	show-match: true;
-	theme: "breeze-dark";
-}

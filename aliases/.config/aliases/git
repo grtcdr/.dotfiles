@@ -1,0 +1,7 @@
+alias \
+	gl='git log' \
+	gs='git status' \
+    ga='git add -A' \
+    gc='git commit -m' \
+    gp='git push' \
+    gch='git checkout'
