@@ -55,3 +55,5 @@ macchina -DrbKpt Boron -X Kernel Packages Uptime ProcessorUsage Battery Memory -
 #macchina -t Hydrogen -X DesktopEnvironment Packages Uptime Terminal -U -c Green -C blue --box-title " 🦀 Rusty "
 # Bars
 #macchina -X ProcessorUsage Memory Battery -K -D -b --no-ascii --no-box -c blue
+# Just my battery
+#macchina -X Battery -b --no-ascii -K -D --no-box -c Green
