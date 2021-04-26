@@ -1,0 +1,26 @@
+swipe:
+  3:
+    left:
+      command: "xdotool set_desktop --relative 1" # Switch to next workspace
+    right:
+      command: "xdotool set_desktop --relative -- -1" # Switch to previous workspace
+    down:
+      command: "xdotool key super" # Open Application Launcher
+  4:
+    left:
+      command: "xdotool key super+Left" # Tile window to the left
+    right:
+      command: "xdotool key super+Right" # Tile window to the right
+    up:
+      command: "xdotool key super+Up" # Tile window to the top
+    down:
+      command: "xdotool key super+Down" # Tile window to the bottom 
+
+pinch:
+  in:
+    command: "xdotool key ctrl+plus" # Zoom in
+  out:
+    command: "xdotool key ctrl+minus" # Zoom out
+
+interval:
+  swipe: 0.7

@@ -1,0 +1,4 @@
+alias \
+	carr='cargo run' \
+	carb='cargo build' \
+	carbr='cargo build --release'
