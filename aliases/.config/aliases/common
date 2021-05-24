@@ -8,10 +8,10 @@ alias \
   cp='cp -i' \
 	mv='mv -i' \
 	ns='nvidia-smi' \
-  vim='nvim' \
 	nrc='$EDITOR ~/.config/nvim' \
 	krc='$EDITOR ~/.config/kitty/kitty.conf' \
 	arc='$EDITOR ~/.config/alacritty/alacritty.yml' \
 	zrc='$EDITOR ~/.zshrc && . ~/.zshrc' \
+  mrc='$EDITOR ~/.config/macchina/macchina.toml' \
 	alrc='$EDITOR ~/.config/aliases && . ~/.zshrc' \
 	sysc='systemctl'

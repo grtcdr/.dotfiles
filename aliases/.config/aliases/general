@@ -1,10 +1,5 @@
 alias \
 	howbig='du --apparent-size -h' \
 	pwg='pwgen --secure --symbols --numerals --ambiguous --capitalize -C' \
-    pkgsize="LANG=C pacman -Qi | sed -n '/^Name[^:]*: \(.*\)/{s//\1 /;x};/^Installed[^:]*: \(.*\)/{s//\1/;H;x;s/\n//;p}' | sort -nk2" \
 	batinfo='upower -i /org/freedesktop/UPower/devices/battery_BAT0' \
-	myip='curl ipinfo.io/ip' \
-	mac='macchina --no-box --no-ascii --no-bar-delimiter --bar --no-separator -r' \
-	mac-bar='macchina -b -X ProcessorUsage Battery Memory --no-ascii --no-box -K -D -n' \
-	extsign='web-ext sign --api-key=$AMO_JWT_ISSUER --api-secret=$AMO_JWT_SECRET' \
-	n='nnn -de'
+	extsign='web-ext sign --api-key=$AMO_JWT_ISSUER --api-secret=$AMO_JWT_SECRET'

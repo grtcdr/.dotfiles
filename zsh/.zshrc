@@ -48,12 +48,13 @@ bindkey "^W" backward-kill-word
 
 # Run macchina!
 # Minimal
-#macchina -c Yellow -C Yellow --no-box --no-ascii --no-separator --no-bar-delimiter --bar
+# macchina -c Yellow -C Yellow --no-box --no-ascii --no-separator --no-bar-delimiter --bar
 # Favorite
-macchina -DrbKpt Boron -X Kernel Packages Uptime ProcessorUsage Battery Memory --no-box
+# macchina -rpt Boron -X Kernel Packages Uptime ProcessorUsage Battery Memory --no-box --custom-ascii ~/.local/share/macchina/arch.ascii --custom-ascii-color blue 
 # Rusty
 #macchina -t Hydrogen -X DesktopEnvironment Packages Uptime Terminal -U -c Green -C blue --box-title " 🦀 Rusty "
 # Bars
 #macchina -X ProcessorUsage Memory Battery -K -D -b --no-ascii --no-box -c blue
 # Just my battery
 #macchina -X Battery -b --no-ascii -K -D --no-box -c Green
+macchina
