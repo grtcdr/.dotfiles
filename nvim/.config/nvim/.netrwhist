@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/grtcdr/.config/ytmdl'
 let g:netrw_dirhist_4='/home/grtcdr/.config/aliases'
 let g:netrw_dirhist_3='/proc/379099'
 let g:netrw_dirhist_2='/home/grtcdr/.config/aliases'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_9='/home/grtcdr/.config/aliases/aliases'
 let g:netrw_dirhist_8='/home/grtcdr/.config/aliases'
 let g:netrw_dirhist_7='/home/grtcdr/.config'
 let g:netrw_dirhist_6='/home/grtcdr'
-let g:netrw_dirhist_5='/home/grtcdr/.config'

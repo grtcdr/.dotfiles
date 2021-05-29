@@ -6,15 +6,14 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export EDITOR="nvim"
 # Alacritty theme directory 
 export T_ALACRITTY="$HOME/.config/alacritty/themes/"
-# Save only the last 10000 commands 
-export SAVEHIST=10000
-# Dump the history in the specified path
-export HISTFILE=~/.zsh/zsh_history
 # Autocomplete aliases
 setopt COMPLETE_ALIASES
-# Ignore duplicate commands
+# Save only the last 10000 commands 
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=10000
+setopt SHARE_HISTORY 
 setopt HIST_IGNORE_DUPS
-# Reduce whitespace
 setopt HIST_REDUCE_BLANKS
 
 autoload -Uz compinit
@@ -46,15 +45,4 @@ bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
 bindkey "^W" backward-kill-word
 
-# Run macchina!
-# Minimal
-# macchina -c Yellow -C Yellow --no-box --no-ascii --no-separator --no-bar-delimiter --bar
-# Favorite
-# macchina -rpt Boron -X Kernel Packages Uptime ProcessorUsage Battery Memory --no-box --custom-ascii ~/.local/share/macchina/arch.ascii --custom-ascii-color blue 
-# Rusty
-#macchina -t Hydrogen -X DesktopEnvironment Packages Uptime Terminal -U -c Green -C blue --box-title " 🦀 Rusty "
-# Bars
-#macchina -X ProcessorUsage Memory Battery -K -D -b --no-ascii --no-box -c blue
-# Just my battery
-#macchina -X Battery -b --no-ascii -K -D --no-box -c Green
 macchina

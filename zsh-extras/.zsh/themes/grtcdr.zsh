@@ -5,7 +5,7 @@ setopt prompt_subst
 # Run vcs_info just before a prompt is displayed (precmd)
 add-zsh-hook precmd vcs_info
 
-PROMPT='%F{40}%~%f%F{075}${vcs_info_msg_0_}%f %F{039}$%f '
+PROMPT='%F{red}%(?..[%?] )%f%F{yellow}%~%f%F{green}${vcs_info_msg_0_}%f %F{magenta}$%f '
 
 # Enable checking for (un)staged changes, enabling use of %u and %c
 zstyle ':vcs_info:*' check-for-changes true
