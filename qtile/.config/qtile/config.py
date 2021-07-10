@@ -1,4 +1,5 @@
 # Custom modules
+from settings import Settings
 from modifiers import *
 from layouts import *
 from keybindings import *
@@ -8,14 +9,14 @@ from groups import groups
 
 # Qtile libraries
 from typing import List
-from libqtile import bar, layout, widget
+from libqtile import bar, layout, widget, hook, qtile
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 
 # General Settings
 widget_defaults = dict(
-    font='JetBrains Mono',
-    fontsize=15,
+    font=Settings.font,
+    fontsize=Settings.font_size,
     padding=4,
 )
 
@@ -28,4 +29,3 @@ bring_front_click = True
 cursor_warp = False
 auto_fullscreen = True
 focus_on_window_activation = "smart"
-wmname = "LG3D"

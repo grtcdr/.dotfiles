@@ -13,4 +13,5 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class='obs'),
     Match(wm_class='Blanket'),
     Match(wm_class='flameshot'),
+    Match(wm_class='file-roller'),
 ], **floating_theme)

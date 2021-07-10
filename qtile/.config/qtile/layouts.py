@@ -1,9 +1,10 @@
+from settings import Settings
 from libqtile import layout
 
 floating_theme = {
     "name": "Flosi",
-    "border_width": 3,
-    "border_focus": "F8B572",
+    "border_width": Settings.border_width,
+    "border_focus": "8093F1",
     "border_normal": "474747"
 }
 
@@ -15,9 +16,12 @@ layouts = [
         border_focus_stack='F8B572',
         border_normal_stack='474747',
         border_on_single=True,
-        border_width=3,
-        margin=16,
+        border_width=Settings.border_width,
+        margin=Settings.gap,
         fair=True,
+    ),
+    layout.Max(
+        name='Max',
     ),
     layout.Floating(
         **floating_theme

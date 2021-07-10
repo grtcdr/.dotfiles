@@ -1,16 +1,8 @@
+from settings import Apps
 from modifiers import *
 from groups import groups
 from libqtile.config import Key, Group, Click, Drag
 from libqtile.lazy import lazy
-
-# App is a container for the different programs I use.
-class App(object):
-    launcher = 'rofi -show drun'
-    activities = 'rofi -show window'
-    browser = 'firefox'
-    terminal = 'alacritty'
-    lockscreen = 'i3lock -c 1c1f21'
-    files = 'thunar'
 
 
 keys = [
@@ -54,12 +46,13 @@ keys = [
     Key([SUPER], "Left", lazy.screen.prev_group()),
 
     # Launch programs
-    Key([SUPER], "Return", lazy.spawn(App.terminal)),
-    Key([SUPER], "r", lazy.spawn(App.launcher)),
-    Key([SUPER], "a", lazy.spawn(App.activities)),
-    Key([SUPER], "e", lazy.spawn(App.files)),
-    Key([ALT], "l", lazy.spawn(App.lockscreen)),
-    Key([SUPER], "b", lazy.spawn(App.browser)),
+    Key([SUPER], "Return", lazy.spawn(Apps.terminal)),
+    Key([SUPER], "r", lazy.spawn(Apps.launcher)),
+    Key([SUPER], "a", lazy.spawn(Apps.activities)),
+    Key([SUPER], "n", lazy.spawn(Apps.emoji_picker)),
+    Key([SUPER], "e", lazy.spawn(Apps.files)),
+    Key([ALT], "l", lazy.spawn(Apps.lockscreen)),
+    Key([SUPER], "b", lazy.spawn(Apps.browser)),
 
     # Audio Output Control
     Key([], "XF86AudioRaiseVolume", lazy.spawn("pamixer -i 5")),
