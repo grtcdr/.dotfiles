@@ -6,7 +6,7 @@ groups = [
     Group("s", matches=[Match(wm_class=["Alacritty"])]),
     Group("d", matches=[Match(wm_class=["Thunar"])]),
     Group("f", matches=[Match(wm_class=["code-oss"])]),
-    Group("u"),
+    Group("u", matches=[Match(wm_class=["virt-manager"])]),
     Group("i", matches=[Match(wm_class=["Signal"])]),
     Group("o", matches=[Match(wm_class=["discord"])]),
     Group("p", layout='floating', matches=[Match(wm_class=["Steam"])]),

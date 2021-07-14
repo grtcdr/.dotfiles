@@ -10,7 +10,7 @@ class Apps(object):
 
 # Settings is a container for global configuration options
 class Settings(object):
-    font = 'JetBrains Mono'
+    font = 'DM Sans'
     font_size = 15
     gap = 10
     border_width = 1

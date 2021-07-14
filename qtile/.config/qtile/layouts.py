@@ -11,9 +11,9 @@ floating_theme = {
 layouts = [
     layout.Columns(
         name='Kolumno',
-        border_focus='F8B572',
+        border_focus='8093F1',
         border_normal='474747',
-        border_focus_stack='F8B572',
+        border_focus_stack='8093F1',
         border_normal_stack='474747',
         border_on_single=True,
         border_width=Settings.border_width,

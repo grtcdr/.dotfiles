@@ -11,7 +11,7 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class='Steam'),
     Match(wm_class='nm-connection-editor'),
     Match(wm_class='obs'),
-    Match(wm_class='Blanket'),
     Match(wm_class='flameshot'),
     Match(wm_class='file-roller'),
+    Match(wm_class='pavucontrol'),
 ], **floating_theme)
