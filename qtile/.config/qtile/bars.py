@@ -9,17 +9,17 @@ mybar = bar.Bar(
             borderwidth=2,
             padding_x=8,
             padding_y=3,
-            this_current_screen_border='A6B1E1',
-            urgent_alert_method='line',
+            this_current_screen_border='ADA15C',
             highlight_method='line',
-            urgent_border='984447',
+            urgent_alert_method='line',
+            urgent_border='88595C',
         ),
         widget.Sep(
             size_percent=30,
             padding=12,
         ),
         widget.CurrentLayout(
-            foreground='A6B1E1',
+            foreground='ADA15C',
         ),
         widget.Sep(
             size_percent=30,
@@ -40,7 +40,7 @@ mybar = bar.Bar(
             padding=16,
         ),
         widget.Backlight(
-            foreground='A6B1E1',
+            foreground='ADA15C',
             fmt='BRI: {}',
             backlight_name='intel_backlight',
             step=5,
@@ -60,7 +60,7 @@ mybar = bar.Bar(
             padding=16,
         ),
         widget.Clock(
-            foreground='A6B1E1',
+            foreground='BB8063',
             format='%a, %I:%M %p',
         ),
     ],

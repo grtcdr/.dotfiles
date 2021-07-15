@@ -38,7 +38,7 @@ keys = [
 
     # Window control
     Key([SUPER], "y", lazy.window.toggle_fullscreen()),
-    Key([SUPER], "v", lazy.window.toggle_floating()),
+    Key([SUPER], "c", lazy.window.toggle_floating()),
     Key([SUPER], "w", lazy.window.kill()),
 
     # Group navigation
@@ -50,6 +50,7 @@ keys = [
     Key([SUPER], "r", lazy.spawn(Apps.launcher)),
     Key([SUPER], "a", lazy.spawn(Apps.activities)),
     Key([SUPER], "n", lazy.spawn(Apps.emoji_picker)),
+    Key([SUPER], "v", lazy.spawn(Apps.clipboard)),
     Key([SUPER], "e", lazy.spawn(Apps.files)),
     Key([ALT], "l", lazy.spawn(Apps.lockscreen)),
     Key([SUPER], "b", lazy.spawn(Apps.browser)),

@@ -7,10 +7,11 @@ class Apps(object):
     lockscreen = 'i3lock -c 1c1f21'
     files = 'thunar'
     emoji_picker = 'rofi -show emoji -modi emoji'
+    clipboard = 'rofi -modi "clipboard:greenclip print" -show clipboard -run-command "{cmd}"'
 
 # Settings is a container for global configuration options
 class Settings(object):
     font = 'DM Sans'
     font_size = 15
     gap = 10
-    border_width = 1
+    border_width = 2

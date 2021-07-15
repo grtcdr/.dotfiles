@@ -4,17 +4,17 @@ from libqtile import layout
 floating_theme = {
     "name": "Flosi",
     "border_width": Settings.border_width,
-    "border_focus": "8093F1",
-    "border_normal": "474747"
+    "border_focus": "808589",
+    "border_normal": "27292A"
 }
 
 layouts = [
     layout.Columns(
         name='Kolumno',
-        border_focus='8093F1',
-        border_normal='474747',
-        border_focus_stack='8093F1',
-        border_normal_stack='474747',
+        border_focus='808589',
+        border_normal='27292A',
+        border_focus_stack='808589',
+        border_normal_stack='27292A',
         border_on_single=True,
         border_width=Settings.border_width,
         margin=Settings.gap,

@@ -1,7 +1,8 @@
 alias \
 	pacin='sudo pacman -S' \
 	pacrm='sudo pacman -R' \
-	pacrs='pacman -Ss' \
+	pacrma='sudo pacman -Rns' \
+	pacsr='pacman -Ss' \
 	pacls='pacman -Qi' \
 	pacup='sudo pacman -Syu' \
-	pacs="pacman -Qq | sk --multi --preview 'pacman -Qi {1}' | xclip -selection clipboard"
+	pacs="pacman -Qq | fzf --preview 'pacman -Qi {1}'"

@@ -1,7 +1,8 @@
 alias \
-	gl='git log' \
 	gs='git status' \
+	gd='git diff' \
 	ga='git add -A' \
-	gc='git commit -m' \
-	gp='git push' \
-	gch='git checkout'
+	gc='git commit' \
+	gcm='git commit -m' \
+	gca='git commit --amend' \
+	gp='git push'

@@ -1,17 +1,13 @@
-# Export locale
+export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 export LANG=en_US.UTF-8
-# Set a custom manpager using 'bat'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-# Export the EDITOR 
 export EDITOR="nvim"
-# Alacritty theme directory 
-export T_ALACRITTY="$HOME/.config/alacritty/themes/"
-# Autocomplete aliases
-setopt COMPLETE_ALIASES
-# Save only the last 10000 commands 
+export VISUAL="nvim"
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
+
+setopt COMPLETE_ALIASES
 setopt SHARE_HISTORY 
 setopt HIST_IGNORE_DUPS
 setopt HIST_REDUCE_BLANKS
@@ -28,14 +24,17 @@ alias -s {css,js,html,md,rs}=code
 function cdls { builtin cd "$@" && exa -F }
 
 # Source my aliases 
-for f in $HOME/.config/aliases/*; do source $f; done
+for f in $HOME/.config/aliases/*; do . $f; done
+
 # Source a few zsh extensions
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+. /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+. /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # Source my theme
-source $HOME/.zsh/themes/grtcdr.zsh
+. "$HOME/.zsh/themes/grtcdr.zsh"
+
 # We all have them, okay? 
-source $HOME/.config/.secrets
+. "$HOME/.config/.secrets"
 
 # Key bindings
 bindkey "^[[A" history-search-backward

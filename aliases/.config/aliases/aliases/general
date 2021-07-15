@@ -1,10 +1,22 @@
 alias \
-	howbig='du --apparent-size -h' \
-	pwg='pwgen --secure --symbols --numerals --ambiguous --capitalize -C' \
-    pkgsize="LANG=C pacman -Qi | sed -n '/^Name[^:]*: \(.*\)/{s//\1 /;x};/^Installed[^:]*: \(.*\)/{s//\1/;H;x;s/\n//;p}' | sort -nk2" \
-	batinfo='upower -i /org/freedesktop/UPower/devices/battery_BAT0' \
-	myip='curl ipinfo.io/ip' \
-	mac='macchina --no-box --no-ascii --no-bar-delimiter --bar --no-separator -r' \
-	mac-bar='macchina -b -X ProcessorUsage Battery Memory --no-ascii --no-box -K -D -n' \
-	extsign='web-ext sign --api-key=$AMO_JWT_ISSUER --api-secret=$AMO_JWT_SECRET' \
-	n='nnn -de'
+	l='exa -F --group-directories-first' \
+	la='exa -la --group-directories-first' \
+	ll='exa -l --group-directories-first' \
+	ls='exa --group-directories-first' \
+	cd='cdls' \
+	..='cd ..' \
+	cp='cp -i' \
+	mv='mv -i' \
+	ns='nvidia-smi' \
+	alrc='$EDITOR ~/.config/aliases && . ~/.zshrc' \
+	arc='$EDITOR ~/.config/alacritty/alacritty.yml' \
+	zrc='$EDITOR ~/.zshrc && . ~/.zshrc' \
+	mrc='$EDITOR ~/.config/macchina/macchina.toml' \
+	nrc='$EDITOR ~/.config/nvim' \
+   qrc='$EDITOR ~/.config/qtile' \
+   rrc='$EDITOR ~/.config/rofi/config.rasi' \
+   prc='$EDITOR ~/.config/picom/picom.conf' \
+	n='nvim' \
+	wesign='web-ext sign --api-key=$AMO_JWT_ISSUER --api-secret=$AMO_JWT_SECRET' \
+	pw='$EDITOR ~/.passwords' \
+   battery='upower -i /org/freedesktop/UPower/devices/battery_BAT0'

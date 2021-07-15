@@ -1,4 +1,8 @@
 alias \
-	carr='cargo run' \
-	carb='cargo build' \
-	carbr='cargo build --release'
+	car='cargo run' \
+   carc='cargo clean --verbose' \
+   card='cargo doc --open' \
+	carb='cargo fmt && cargo build' \
+	carbr='cargo fmt && cargo build --release' \
+   cart='cargo test' \
+   carp='cargo fmt && cargo package && cargo publish'
